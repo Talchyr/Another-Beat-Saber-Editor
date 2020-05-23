@@ -36,11 +36,11 @@ public class NoteHandler : MonoBehaviour
 	// spawn notes function
 	void SpawnNotes() {
 		// create fake note data
-		Notes[] sampleNotes = new Notes[3];
+		Notes[] sampleNotes = new Notes[4];
 		sampleNotes[0] = new Notes(0, 0, 0, 0, 0);
 		sampleNotes[1] = new Notes(1, 0, 0, 0, 0);
 		sampleNotes[2] = new Notes(3, 0, 0, 0, 0);
-		//sampleNotes[3] = new Notes(8, 0, 0, 0, 0);
+		sampleNotes[3] = new Notes(8, 0, 0, 0, 0);
 
 		// set notes to loaded notes
 		Notes[] loadedNotes = sampleNotes;
