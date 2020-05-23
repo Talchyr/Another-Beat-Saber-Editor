@@ -30,10 +30,10 @@ public class Notebox : MonoBehaviour
 	void SetColor() {
 		switch (noteType) {
 			case 0:
-				box.GetComponent<Renderer>().material.color = Color.red; // replace with "left color" later
+				box.GetComponent<Renderer>().material.color = Color.red; // (replace with global color later)
 				break;
 			case 1:
-				box.GetComponent<Renderer>().material.color = Color.blue;
+				box.GetComponent<Renderer>().material.color = Color.blue; // (replace with global color later)
 				break;
 			default:
 				Debug.Log("Error in setting note type int.");

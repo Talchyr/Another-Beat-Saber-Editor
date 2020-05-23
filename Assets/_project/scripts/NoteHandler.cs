@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
-// handles 
-
 public class NoteHandler : MonoBehaviour
 {
 	public class Notes
@@ -25,18 +23,18 @@ public class NoteHandler : MonoBehaviour
 		}
 	}
 
-	// spawn notes for testing
-	void Start() {
-		SpawnNotes();
-	}
-
 	public GameObject notePrefab;
 	public float noteSpeed; // hyperspeed
-	//public float lineColumn;
-	//public float lineRow;
+	public Notes[] loadedNotes;
 
-	void SpawnNotes() {
-		/// create fake note data
+	//// spawn notes for testing
+	//void Start() {
+	//	SpawnNotes();
+	//}
+
+	public void SpawnNotes() {
+		///*	
+		// create fake note data
 		Notes[] sampleNotes = new Notes[10];
 		sampleNotes[0] = new Notes(0, 0, 0, 0, 1);
 		sampleNotes[1] = new Notes(1, 1, 1, 0, 7);
@@ -47,10 +45,12 @@ public class NoteHandler : MonoBehaviour
 		sampleNotes[6] = new Notes(11, 2, 0, 1, 2);
 		sampleNotes[7] = new Notes(12, 3, 2, 1, 6);
 		sampleNotes[8] = new Notes(13, 1, 0, 0, 8);
-		sampleNotes[9] = new Notes(13, 2, 0, 1, 8);
-
-		// set notes to loaded notes
+		sampleNotes[9] = new Notes(13, 2, 0, 1, 8);	
+		
+		// load fake note data
 		Notes[] loadedNotes = sampleNotes;
+		//*/
+
 
 		// go through note array
 		foreach (Notes note in loadedNotes) {
@@ -61,11 +61,8 @@ public class NoteHandler : MonoBehaviour
 				note.time * noteSpeed	// z
 			), Quaternion.identity);
 
-			// set color
-			g.GetComponent<Notebox>().noteType = note.type;
-
-			// set rotation
-			g.GetComponent<Notebox>().noteDirection = (Notebox.NoteDir)note.cutDirection;
+			g.GetComponent<Notebox>().noteType = note.type; // set L/R color
+			g.GetComponent<Notebox>().noteDirection = (Notebox.NoteDir)note.cutDirection; // set cut direction
 		}
 
 	}
