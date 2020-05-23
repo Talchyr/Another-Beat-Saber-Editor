@@ -668,6 +668,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &427900258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427900260}
+  - component: {fileID: 427900259}
+  m_Layer: 0
+  m_Name: NoteHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &427900259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427900258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b2fb92ddbc9a9429d2ad926dd26ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteGameobj: {fileID: 6916392199391334761, guid: 1a3a610a8f99492409689461f386da96,
+    type: 3}
+  noteSpeed: 10
+--- !u!4 &427900260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427900258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.70100313, y: -0.15592405, z: 11.80754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &430925836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,7 +2320,7 @@ GameObject:
   - component: {fileID: 1806056920}
   - component: {fileID: 1806056919}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DataHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2292,8 +2338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e53ae77d7a078845a6f26be4dc1bd5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: D:\Games\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\CustomLevels\356b
-    (Rude Buster - raynarch)\Expert.dat
+  filePath: 
 --- !u!4 &1806056920
 Transform:
   m_ObjectHideFlags: 0
