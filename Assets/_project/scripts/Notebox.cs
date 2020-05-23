@@ -5,23 +5,44 @@ using UnityEngine;
 public class Notebox : MonoBehaviour
 {
 	public NoteDir noteDirection;
+	public int noteType;
 	public GameObject arrow;
 	public GameObject dot;
-
+	public GameObject box;
 
 	public enum NoteDir {
-		Down,
-		DownRight,
-		Right,
-		UpRight,
 		Up,
-		UpLeft,
+		Down,
 		Left,
+		Right,
+		UpLeft,
+		UpRight,
 		DownLeft,
+		DownRight,
 		Any
 	}
 
-	void Update() { // throwing this in update for now to see if it works
+	private void Start() {
+		SetColor();
+		SetRotation();
+	}
+
+	void SetColor() {
+		switch (noteType) {
+			case 0:
+				box.GetComponent<Renderer>().material.color = Color.red; // replace with "left color" later
+				break;
+			case 1:
+				box.GetComponent<Renderer>().material.color = Color.blue;
+				break;
+			default:
+				Debug.Log("Error in setting note type int.");
+				break;
+		}
+		
+	}
+
+	void SetRotation() {
 		if (noteDirection == NoteDir.Any) {
 			dot.SetActive(true);
 			arrow.SetActive(false);
