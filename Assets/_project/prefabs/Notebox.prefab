@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b9e70e4314a7e4a8acee139336984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noteDirection: 0
+  arrow: {fileID: 7920314344251046601}
+  dot: {fileID: 6827070260211110348}
 --- !u!1 &6827070260211110348
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +217,7 @@ GameObject:
   - component: {fileID: 6461106187240748656}
   - component: {fileID: 7465398484438679688}
   m_Layer: 0
-  m_Name: direction
+  m_Name: arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
