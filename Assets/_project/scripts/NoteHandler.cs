@@ -25,12 +25,19 @@ public class NoteHandler : MonoBehaviour
 
 	public GameObject notePrefab;
 	public float noteSpeed; // hyperspeed
-	//public Notes[] loadedNotes;
+	public List<Notes> editorNotes;
 	public float onMeasure;
+	GameObject noteHolder;
 
-	public void SpawnNotes() {
+
+	private void Start() {
+		noteHolder = new GameObject("NoteHolder"); // create note parent
+	}
+
+	public void LoadNotes() {
 		// LIST VERSION //
-		// create fake note data
+
+		/// create fake note data
 		List<Notes> sampleNotes = new List<Notes>();
 		sampleNotes.Add(new Notes(0, 0, 0, 0, 1));
 		sampleNotes.Add(new Notes(1, 1, 1, 0, 7));
@@ -43,20 +50,31 @@ public class NoteHandler : MonoBehaviour
 		sampleNotes.Add(new Notes(13, 1, 0, 0, 8));
 		sampleNotes.Add(new Notes(13, 2, 0, 1, 8));
 
-		// load fake note data
-		List<Notes> loadedNotes = sampleNotes;
+		/// load fake note data
+		editorNotes = sampleNotes;
+
+		// load note data
+		//editorNotes = 
+
+		// delete notes already in the scene
+		if (noteHolder != null) {
+			Destroy(noteHolder);
+		}
+		noteHolder = new GameObject("NoteHolder"); // replace deleted note holder
 
 		// go through note list
-		foreach (Notes note in loadedNotes) {
-			// instantiate a new note at offset
-			GameObject g = Instantiate(notePrefab, new Vector3(
+		foreach (Notes note in editorNotes) {
+			GameObject n = Instantiate(notePrefab, noteHolder.transform); // instantiate a new note as child
+
+			// offset the note
+			n.transform.position = new Vector3(
 				-1.5f + note.lineIndex, // x
 				0.5f + note.lineLayer,  // y
 				note.time * noteSpeed   // z
-			), Quaternion.identity);
+			);
 
-			g.GetComponent<Notebox>().noteType = note.type; // set L/R color
-			g.GetComponent<Notebox>().noteDirection = (Notebox.NoteDir)note.cutDirection; // set cut direction
+			n.GetComponent<Notebox>().noteType = note.type; // set L/R color
+			n.GetComponent<Notebox>().noteDirection = (Notebox.NoteDir)note.cutDirection; // set cut direction
 		}
 	}
 

@@ -821,7 +821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e53ae77d7a078845a6f26be4dc1bd5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: 
+  filePath: Assets/_project/example songs/rude buster - Expert.dat
 --- !u!114 &516941722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,6 +837,7 @@ MonoBehaviour:
   notePrefab: {fileID: 1471938156581213567, guid: 76d6e2eaf23c3c047994f693344086ae,
     type: 3}
   noteSpeed: 2
+  onMeasure: 0
 --- !u!114 &516941723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,7 +851,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadMap: 0
-  cursorOnMeasure: 0
+  measureFwd: 0
+  measureBack: 0
 --- !u!4 &516941724
 Transform:
   m_ObjectHideFlags: 0
@@ -859,7 +861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516941720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7955182, y: 1.2441306, z: 12.452487}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
