@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class NoteHandler : MonoBehaviour
 {
-	public class Notes
-	{
+	public class Notes {
 		public	float	time;
 		public	float	lineIndex;
 		public	float	lineLayer;
@@ -37,6 +36,7 @@ public class NoteHandler : MonoBehaviour
 	public void LoadNotes() {
 		// LIST VERSION //
 
+		/*
 		/// create fake note data
 		List<Notes> sampleNotes = new List<Notes>();
 		sampleNotes.Add(new Notes(0, 0, 0, 0, 1));
@@ -52,9 +52,10 @@ public class NoteHandler : MonoBehaviour
 
 		/// load fake note data
 		editorNotes = sampleNotes;
+		*/
 
 		// load note data
-		//editorNotes = 
+		editorNotes = gameObject.GetComponent<DataHandler>().loadedNotes;
 
 		// delete notes already in the scene
 		if (noteHolder != null) {

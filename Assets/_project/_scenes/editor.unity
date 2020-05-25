@@ -799,9 +799,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 516941724}
+  - component: {fileID: 516941721}
   - component: {fileID: 516941723}
   - component: {fileID: 516941722}
-  - component: {fileID: 516941721}
   m_Layer: 0
   m_Name: MainLogic
   m_TagString: Untagged
@@ -822,6 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filePath: Assets/_project/example songs/rude buster - Expert.dat
+  savePath: Assets/_project/example songs/test.dat
 --- !u!114 &516941722
 MonoBehaviour:
   m_ObjectHideFlags: 0
