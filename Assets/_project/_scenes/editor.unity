@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
+  m_Fog: 1
+  m_FogColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
+  m_FogMode: 2
+  m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
@@ -837,9 +837,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1471938156581213567, guid: 76d6e2eaf23c3c047994f693344086ae,
     type: 3}
-  noteSpeed: 3
+  noteSpeed: 10
   onMeasure: 0
   noteDisplayRange: {x: 0, y: 50}
+  play: 0
 --- !u!114 &516941723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13b9473a0f693148b53466b5a3bceae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadMap: 0
+  loadMap: 1
   measureFwd: 0
   measureBack: 0
 --- !u!4 &516941724
