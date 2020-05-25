@@ -6,6 +6,7 @@ public class TestUIHandler : MonoBehaviour
 {
 	public bool loadMap;
 	//public float cursorOnMeasure;
+
 	public bool measureFwd;
 	public bool measureBack;
 

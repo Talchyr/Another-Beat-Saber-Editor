@@ -13,6 +13,7 @@ public class NoteHandler : MonoBehaviour
 	public float onMeasure;
 	GameObject noteHolder;
 	public Vector2 noteDisplayRange;
+	public bool play;
 
 	public class Notes {
 		public	float	time;
@@ -80,7 +81,8 @@ public class NoteHandler : MonoBehaviour
 		}
 	}
 
-	public void Update() {
+	void Update() {
+		// note display range
 		foreach (Transform n in noteHolder.GetComponentInChildren<Transform>()) {
 			//Debug.Log(n.gameObject);
 			if (n.position.z > noteDisplayRange.x && n.position.z < noteDisplayRange.y) {
@@ -89,6 +91,11 @@ public class NoteHandler : MonoBehaviour
 			else {
 				n.gameObject.SetActive(false);
 			}
+		}
+
+		// * map automatically scrolls
+		if (play) {
+			noteHolder.transform.position = new Vector3(0, 0, noteHolder.transform.position.z - (noteSpeed * 2 * Time.deltaTime));
 		}
 	}
 
