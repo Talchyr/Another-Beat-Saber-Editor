@@ -837,8 +837,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1471938156581213567, guid: 76d6e2eaf23c3c047994f693344086ae,
     type: 3}
-  noteSpeed: 2
+  noteSpeed: 3
   onMeasure: 0
+  noteDisplayRange: {x: 0, y: 50}
 --- !u!114 &516941723
 MonoBehaviour:
   m_ObjectHideFlags: 0

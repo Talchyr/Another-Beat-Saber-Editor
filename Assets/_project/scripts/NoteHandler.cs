@@ -6,6 +6,14 @@ using UnityEngine;
 
 public class NoteHandler : MonoBehaviour
 {
+
+	public GameObject notePrefab;
+	public float noteSpeed; // hyperspeed
+	public List<Notes> editorNotes;
+	public float onMeasure;
+	GameObject noteHolder;
+	public Vector2 noteDisplayRange;
+
 	public class Notes {
 		public	float	time;
 		public	float	lineIndex;
@@ -21,13 +29,6 @@ public class NoteHandler : MonoBehaviour
 			cutDirection = dir;
 		}
 	}
-
-	public GameObject notePrefab;
-	public float noteSpeed; // hyperspeed
-	public List<Notes> editorNotes;
-	public float onMeasure;
-	GameObject noteHolder;
-
 
 	private void Start() {
 		noteHolder = new GameObject("NoteHolder"); // create note parent
@@ -79,9 +80,22 @@ public class NoteHandler : MonoBehaviour
 		}
 	}
 
+	public void Update() {
+		foreach (Transform n in noteHolder.GetComponentInChildren<Transform>()) {
+			//Debug.Log(n.gameObject);
+			if (n.position.z > noteDisplayRange.x && n.position.z < noteDisplayRange.y) {
+				n.gameObject.SetActive(true);
+			}
+			else {
+				n.gameObject.SetActive(false);
+			}
+		}
+	}
+
 	public void MoveForward() {
 
 	}
+
 	public void MoveBack() {
 
 	}
